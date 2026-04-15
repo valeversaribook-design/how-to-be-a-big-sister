@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How to be a Big Sister – Your Exclusive Bonuses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --cream:#FEF8F1; --orange:#F5A623; --orange2:#E8901A;
+  --pink:#EE3585; --pink2:#C4196A; --rose:#F9D4E4;
+  --white:#FFFFFF; --text:#2E1A0E; --muted:#7A5C4A; --border:#F0DDD0;
+  --radius:20px; --shadow:0 4px 24px rgba(238,53,133,.10);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 70% 55% at 15% 10%,rgba(252,234,222,.7) 0%,transparent 65%),
+             radial-gradient(ellipse 55% 45% at 85% 85%,rgba(249,212,228,.5) 0%,transparent 65%);}
+#hb{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+#hb span{position:absolute;display:block;opacity:0;animation:fu linear infinite;}
+@keyframes fu{0%{opacity:0;transform:translateY(0) rotate(-10deg) scale(.8);}10%{opacity:.18;}90%{opacity:.12;}100%{opacity:0;transform:translateY(-110vh) rotate(15deg) scale(1.1);}}
+.wrap{position:relative;z-index:1;}
+
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:64px 24px 52px;gap:20px;}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 18px;border-radius:100px;box-shadow:0 4px 16px rgba(238,53,133,.3);}
+.cover{width:180px;height:180px;object-fit:cover;border-radius:24px;box-shadow:0 20px 56px rgba(238,53,133,.2);transform:rotate(-2deg);transition:transform .4s;}
+.cover:hover{transform:rotate(0deg) scale(1.04);}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3rem);color:var(--text);line-height:1.15;max-width:560px;}
+.hero h1 em{font-style:italic;color:var(--pink);}
+.hero>p{font-size:1.05rem;color:var(--muted);max-width:480px;line-height:1.65;font-weight:300;}
+.divider{display:flex;align-items:center;gap:14px;width:100%;max-width:420px;margin-top:4px;}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);}
+.divider span{font-size:1.1rem;color:var(--pink);letter-spacing:4px;}
+
+.sec{max-width:1080px;margin:0 auto;padding:0 24px 64px;}
+.sec-h{text-align:center;margin-bottom:36px;}
+.sec-label{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--text);line-height:1.2;}
+.sec-sub{font-size:.95rem;color:var(--muted);margin-top:8px;font-weight:300;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
+
+.card{background:var(--white);border-radius:var(--radius);border:1.5px solid var(--border);padding:26px 22px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),var(--pink));}
+.card.alt::before{background:linear-gradient(90deg,var(--pink),var(--pink2));}
+.card:hover{transform:translateY(-5px);box-shadow:0 12px 40px rgba(238,53,133,.16);}
+.cnum{position:absolute;top:14px;right:16px;font-size:.72rem;font-weight:600;color:var(--pink);background:var(--rose);padding:2px 10px;border-radius:100px;}
+.cicon{font-size:2rem;line-height:1;}
+.ctitle{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--text);line-height:1.25;}
+.cdesc{font-size:.87rem;color:var(--muted);line-height:1.6;flex:1;font-weight:300;}
+
+/* Preview = clickable image link that opens full size in new tab */
+.prev-link{display:block;width:100%;border-radius:12px;overflow:hidden;border:1px solid var(--border);aspect-ratio:4/3;background:rgba(238,53,133,.04);position:relative;text-decoration:none;}
+.prev-link img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
+.prev-link:hover img{transform:scale(1.05);}
+.prev-link .pov{position:absolute;inset:0;background:rgba(46,26,14,.35);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;}
+.prev-link:hover .pov{opacity:1;}
+.prev-link .pov span{background:#fff;color:var(--pink);font-size:.82rem;font-weight:600;padding:7px 18px;border-radius:100px;}
+
+/* Bookmarks row */
+.bm-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.bm-link{display:block;border-radius:8px;overflow:hidden;border:1px solid var(--border);aspect-ratio:2/5;background:rgba(238,53,133,.04);position:relative;text-decoration:none;}
+.bm-link img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
+.bm-link:hover img{transform:scale(1.06);}
+.bm-link .pov{position:absolute;inset:0;background:rgba(46,26,14,.35);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;}
+.bm-link:hover .pov{opacity:1;}
+.bm-link .pov span{background:#fff;color:var(--pink);font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;}
+.bm-btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;}
+.bm-btns a{display:flex;align-items:center;justify-content:center;padding:8px 4px;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;text-decoration:none;background:linear-gradient(135deg,var(--pink),var(--pink2));color:#fff;transition:transform .18s;}
+.bm-btns a:hover{transform:scale(1.04);}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 22px;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;border:none;text-decoration:none;transition:transform .18s;}
+.btn:hover{transform:scale(1.04);}
+.btn-p{background:linear-gradient(135deg,var(--pink),var(--pink2));color:#fff;box-shadow:0 4px 16px rgba(238,53,133,.28);}
+.btn-o{background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;box-shadow:0 4px 16px rgba(245,166,35,.3);}
+.btn-f{background:linear-gradient(135deg,#9B8FA8,#6B9BB8);color:#fff;}
+.btn-r{background:linear-gradient(135deg,#FF6B35,var(--pink));color:#fff;}
+
+/* Audio section */
+.audio-box{background:linear-gradient(135deg,var(--pink) 0%,var(--orange) 100%);border-radius:28px;padding:44px 36px;text-align:center;color:#fff;box-shadow:0 16px 48px rgba(238,53,133,.28);position:relative;overflow:hidden;margin-bottom:20px;}
+.audio-box::after{content:'🎵';position:absolute;font-size:9rem;opacity:.06;right:-20px;bottom:-20px;transform:rotate(-15deg);pointer-events:none;}
+.audio-box h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:8px;}
+.audio-box>p{font-weight:300;opacity:.9;margin-bottom:28px;}
+.audio-inner{background:rgba(255,255,255,.18);border-radius:18px;padding:20px 24px;display:flex;flex-direction:column;gap:14px;align-items:center;}
+/* Style the native audio player */
+audio{width:100%;border-radius:12px;accent-color:var(--pink);outline:none;}
+audio::-webkit-media-controls-panel{background:rgba(255,255,255,.9);border-radius:12px;}
+.speed-row{display:flex;align-items:center;gap:8px;font-size:.78rem;opacity:.9;flex-wrap:wrap;justify-content:center;}
+.speed-row span{opacity:.7;font-weight:600;}
+.speed-btn{background:rgba(255,255,255,.2);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:100px;padding:5px 14px;font-size:.78rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;}
+.speed-btn:hover,.speed-btn.active{background:#fff;color:var(--pink);}
+
+.forum-box{background:linear-gradient(135deg,#2D2416,#3D3128);border-radius:28px;padding:44px 36px;color:#fff;display:flex;gap:32px;align-items:center;box-shadow:0 16px 48px rgba(45,36,22,.25);margin-bottom:20px;flex-wrap:wrap;}
+.fl{flex:1;min-width:220px;}
+.flabel{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+.forum-box h2{font-family:'Playfair Display',serif;font-size:1.75rem;margin-bottom:10px;line-height:1.2;}
+.forum-box p{font-weight:300;opacity:.8;line-height:1.65;font-size:.95rem;}
+.fr{display:flex;flex-direction:column;gap:10px;align-items:flex-start;}
+.fstat{display:flex;align-items:center;gap:8px;font-size:.88rem;opacity:.8;}
+.fdot{width:8px;height:8px;border-radius:50%;background:var(--orange);flex-shrink:0;}
+
+.rev-box{background:var(--white);border-radius:28px;border:1.5px solid var(--border);padding:44px 36px;text-align:center;box-shadow:var(--shadow);margin-bottom:20px;}
+.stars{font-size:2rem;letter-spacing:4px;margin-bottom:14px;}
+.rev-box h2{font-family:'Playfair Display',serif;font-size:1.75rem;color:var(--pink);margin-bottom:10px;}
+.rev-box p{font-size:.95rem;color:var(--muted);max-width:500px;margin:0 auto 24px;line-height:1.65;font-weight:300;}
+
+footer{text-align:center;padding:28px 24px 44px;font-size:.83rem;color:var(--muted);}
+footer strong{color:var(--text);}
+@media(max-width:600px){.grid{grid-template-columns:1fr;}.forum-box,.audio-box,.rev-box{padding:28px 20px;}}
+</style>
+</head>
+<body>
+
+<div id="hb"></div>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="badge">✨ Exclusive Reader Bonuses ✨</div>
+  <img class="cover" src="assets/images/cover.jpg" alt="How to be a Big Sister"
+       onerror="this.src='https://images-na.ssl-images-amazon.com/images/I/61RnDLyR2mL._SL1000_.jpg'" />
+  <h1>Your <em>Big Sister</em><br>Bonus Bundle</h1>
+  <p>Thank you so much for reading! Here are your 15 exclusive free gifts — made with love, just for you and your little one. 🌸</p>
+  <div class="divider"><span>💕 ♡ 💕</span></div>
+</header>
+
+<section class="sec">
+  <div class="sec-h">
+    <div class="sec-label">13 Printable Gifts</div>
+    <h2 class="sec-title">Download, Print &amp; Enjoy</h2>
+    <p class="sec-sub">Click any image to open the full preview — then save or print! 🖨</p>
+  </div>
+  <div class="grid">
+
+    <div class="card alt">
+      <span class="cnum">#1</span><div class="cicon">🌙</div>
+      <div class="ctitle">Bedtime Routine Chart</div>
+      <a class="prev-link" href="downloads/01-bedtime-routine-chart.png" target="_blank">
+        <img src="downloads/01-bedtime-routine-chart.png" alt="Bedtime Routine Chart" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">A beautiful chart to help big sister wind down and feel calm every night.</div>
+      <a class="btn btn-p" href="downloads/01-bedtime-routine-chart.png" download>⬇ Download</a>
+    </div>
+
+    <div class="card">
+      <span class="cnum">#2</span><div class="cicon">💛</div>
+      <div class="ctitle">Kind Challenge Cards</div>
+      <a class="prev-link" href="downloads/02-kind-challenge-cards.png" target="_blank">
+        <img src="downloads/02-kind-challenge-cards.png" alt="Kind Challenge Cards" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">Fun daily kindness challenges — little acts of love that make a big difference.</div>
+      <a class="btn btn-o" href="downloads/02-kind-challenge-cards.png" download>⬇ Download</a>
+    </div>
+
+    <div class="card alt">
+      <span class="cnum">#3</span><div class="cicon">🚪</div>
+      <div class="ctitle">Big Sister Room Sign</div>
+      <a class="prev-link" href="downloads/03-cartello-big-sister-room.png" target="_blank">
+        <img src="downloads/03-cartello-big-sister-room.png" alt="Big Sister Room Sign" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">A gorgeous door sign — every big sister deserves her own special space.</div>
+      <a class="btn btn-p" href="downloads/03-cartello-big-sister-room.png" download>⬇ Download</a>
+    </div>
+
+    <div class="card">
+      <span class="cnum">#4</span><div class="cicon">🫙</div>
+      <div class="ctitle">Wish Jar Cards</div>
+      <a class="prev-link" href="downloads/04-wish-jar-cards.png" target="_blank">
+        <img src="downloads/04-wish-jar-cards.png" alt="Wish Jar Cards" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">Fill a jar with wishes for baby — the sweetest gift big sister can give.</div>
+      <a class="btn btn-o" href="downloads/04-wish-jar-cards.png" download>⬇ Download</a>
+    </div>
+
+    <div class="card alt">
+      <span class="cnum">#5</span><div class="cicon">🎵</div>
+      <div class="ctitle">Big Sister's Lullaby Card</div>
+      <a class="prev-link" href="downloads/05-lullaby-lyric-card.png" target="_blank">
+        <img src="downloads/05-lullaby-lyric-card.png" alt="Lullaby Lyric Card" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">A lullaby card for big sister to sing to baby — a moment they will both remember.</div>
+      <a class="btn btn-p" href="downloads/05-lullaby-lyric-card.png" download>⬇ Download</a>
+    </div>
+
+    <div class="card">
+      <span class="cnum">#6</span><div class="cicon">🎨</div>
+      <div class="ctitle">I Draw My Family</div>
+      <a class="prev-link" href="downloads/06-draw-my-family.jpg" target="_blank">
+        <img src="downloads/06-draw-my-family.jpg" alt="I Draw My Family" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">A printable drawing sheet to capture the whole family — a keepsake forever.</div>
+      <a class="btn btn-o" href="downloads/06-draw-my-family.jpg" download>⬇ Download</a>
+    </div>
+
+    <div class="card alt">
+      <span class="cnum">#7</span><div class="cicon">📸</div>
+      <div class="ctitle">My Baby Scrapbook Page</div>
+      <a class="prev-link" href="downloads/07-my-baby-scrapbook-page.png" target="_blank">
+        <img src="downloads/07-my-baby-scrapbook-page.png" alt="My Baby Scrapbook Page" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">A beautiful scrapbook page to preserve the first precious memories with baby.</div>
+      <a class="btn btn-p" href="downloads/07-my-baby-scrapbook-page.png" download>⬇ Download</a>
+    </div>
+
+    <div class="card">
+      <span class="cnum">#8</span><div class="cicon">📅</div>
+      <div class="ctitle">Baby Countdown Calendar</div>
+      <a class="prev-link" href="downloads/08-baby-countdown-calendar.png" target="_blank">
+        <img src="downloads/08-baby-countdown-calendar.png" alt="Baby Countdown Calendar" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">Count down the days together — one box to color each day until baby arrives!</div>
+      <a class="btn btn-o" href="downloads/08-baby-countdown-calendar.png" download>⬇ Download</a>
+    </div>
+
+    <div class="card alt">
+      <span class="cnum">#9</span><div class="cicon">👑</div>
+      <div class="ctitle">Big Sister Rules Poster</div>
+      <a class="prev-link" href="downloads/09-big-sister-rules-poster.jpg" target="_blank">
+        <img src="downloads/09-big-sister-rules-poster.jpg" alt="Big Sister Rules Poster" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">A stunning wall poster with the official Big Sister Rules — print and hang with pride!</div>
+      <a class="btn btn-p" href="downloads/09-big-sister-rules-poster.jpg" download>⬇ Download</a>
+    </div>
+
+    <div class="card">
+      <span class="cnum">#10</span><div class="cicon">🏆</div>
+      <div class="ctitle">Super Big Sister Award</div>
+      <a class="prev-link" href="downloads/10-super-big-sister-award.jpg" target="_blank">
+        <img src="downloads/10-super-big-sister-award.jpg" alt="Super Big Sister Award" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">An official certificate to celebrate your little one's new superpower role!</div>
+      <a class="btn btn-o" href="downloads/10-super-big-sister-award.jpg" download>⬇ Download</a>
+    </div>
+
+    <div class="card alt">
+      <span class="cnum">#11</span><div class="cicon">🔖</div>
+      <div class="ctitle">Set of 3 Bookmarks</div>
+      <div class="bm-row">
+        <a class="bm-link" href="downloads/11-bookmarks-1.jpg" target="_blank">
+          <img src="downloads/11-bookmarks-1.jpg" alt="Bookmark 1" />
+          <div class="pov"><span>🔍</span></div>
+        </a>
+        <a class="bm-link" href="downloads/11-bookmarks-2.jpg" target="_blank">
+          <img src="downloads/11-bookmarks-2.jpg" alt="Bookmark 2" />
+          <div class="pov"><span>🔍</span></div>
+        </a>
+        <a class="bm-link" href="downloads/11-bookmarks-3.jpg" target="_blank">
+          <img src="downloads/11-bookmarks-3.jpg" alt="Bookmark 3" />
+          <div class="pov"><span>🔍</span></div>
+        </a>
+      </div>
+      <div class="cdesc">Three adorable bookmarks — click each one to preview, then download and cut out!</div>
+      <div class="bm-btns">
+        <a href="downloads/11-bookmarks-1.jpg" download>⬇ #1</a>
+        <a href="downloads/11-bookmarks-2.jpg" download>⬇ #2</a>
+        <a href="downloads/11-bookmarks-3.jpg" download>⬇ #3</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="cnum">#12</span><div class="cicon">🖍️</div>
+      <div class="ctitle">Big Sister &amp; Me Coloring Page</div>
+      <a class="prev-link" href="downloads/12-big-sister-and-me-coloring.jpg" target="_blank">
+        <img src="downloads/12-big-sister-and-me-coloring.jpg" alt="Big Sister and Me Coloring Page" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">A sweet coloring page featuring big sister and baby — color it together!</div>
+      <a class="btn btn-o" href="downloads/12-big-sister-and-me-coloring.jpg" download>⬇ Download</a>
+    </div>
+
+    <div class="card alt">
+      <span class="cnum">#13</span><div class="cicon">✅</div>
+      <div class="ctitle">Great Big Sister Checklist</div>
+      <a class="prev-link" href="downloads/13-great-big-sister-checklist.jpg" target="_blank">
+        <img src="downloads/13-great-big-sister-checklist.jpg" alt="Great Big Sister Checklist" />
+        <div class="pov"><span>🔍 Open Preview</span></div>
+      </a>
+      <div class="cdesc">"Today I was a great big sister because…" — a daily checklist full of love and pride.</div>
+      <a class="btn btn-p" href="downloads/13-great-big-sister-checklist.jpg" download>⬇ Download</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- BONUS 14 — AUDIOBOOK -->
+<section class="sec" style="padding-top:0">
+  <div class="audio-box">
+    <h2>🎧 Bonus #14 — Audiobook</h2>
+    <p>The full story read aloud — perfect for bedtime or snuggling together on the sofa.</p>
+    <div class="audio-inner">
+      <audio id="aud" controls preload="metadata" style="width:100%">
+        <source src="assets/audio/audiobook.mp3" type="audio/mpeg" />
+      </audio>
+      <div class="speed-row">
+        <span>Speed:</span>
+        <button class="speed-btn" onclick="setSpd(0.75,this)">0.75x</button>
+        <button class="speed-btn active" onclick="setSpd(1,this)">1x</button>
+        <button class="speed-btn" onclick="setSpd(1.25,this)">1.25x</button>
+        <button class="speed-btn" onclick="setSpd(1.5,this)">1.5x</button>
+        <button class="speed-btn" onclick="setSpd(2,this)">2x</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS 15 — FORUM -->
+<section class="sec" style="padding-top:0">
+  <div class="forum-box">
+    <div class="fl">
+      <div class="flabel">🪺 Bonus #15 — Community</div>
+      <h2>Join MomNest</h2>
+      <p>Connect with hundreds of moms on the same journey. Share stories, ask questions, and find your tribe — free, warm, and always there for you.</p>
+    </div>
+    <div class="fr">
+      <div class="fstat"><div class="fdot"></div>Active moms sharing daily</div>
+      <div class="fstat"><div class="fdot"></div>Big Sister &amp; Big Brother topics</div>
+      <div class="fstat"><div class="fdot"></div>Pregnancy prep &amp; baby arrival</div>
+      <a class="btn btn-f" href="https://momnest.vercel.app/" target="_blank" rel="noopener">🪺 Join the Community</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW -->
+<section class="sec" style="padding-top:0">
+  <div class="rev-box">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <h2>Did you enjoy the book? 💕</h2>
+    <p>Your review means everything! It takes just 2 minutes and helps other families discover this book. Every single review makes a real difference.</p>
+    <a class="btn btn-r" href="https://www.amazon.com/review/create-review/?asin=B0G3W9ZN7C" target="_blank" rel="noopener">⭐ Write a Review on Amazon</a>
+  </div>
+</section>
+
+<footer>
+  Made with <span style="color:var(--pink)">♥</span> for every <strong>Big Sister</strong> out there
+  &nbsp;·&nbsp; How to be a Big Sister by Maggie Marvel
+</footer>
+
+</div>
+
+<script>
+// Hearts
+var hb = document.getElementById('hb');
+var hc = ['♡','❤','💕','💗','💖','🌸','⭐','✨'];
+for (var i = 0; i < 22; i++) {
+  var s = document.createElement('span');
+  s.textContent = hc[Math.floor(Math.random()*hc.length)];
+  s.style.left = (Math.random()*100)+'vw';
+  s.style.top = (Math.random()*100+100)+'vh';
+  s.style.fontSize = (0.7+Math.random()*1.2)+'rem';
+  s.style.animationDuration = (14+Math.random()*18)+'s';
+  s.style.animationDelay = (Math.random()*22)+'s';
+  hb.appendChild(s);
+}
+
+// Speed control for native audio
+function setSpd(val, btn) {
+  var aud = document.getElementById('aud');
+  if (aud) aud.playbackRate = val;
+  var btns = document.querySelectorAll('.speed-btn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
